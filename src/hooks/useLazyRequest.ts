@@ -5,8 +5,8 @@ const defaultOptions: RequestOptions = {
     method: 'GET'
 };
 
-const useLazyRequest = <T>(url: string, instanceOptions?: RequestOptions): LazyRequestHookReturn => {
-    const [ data, setData ] = useState<T>();
+const useLazyRequest = <T>(url: string, instanceOptions?: RequestOptions): LazyRequestHookReturn<T> => {
+    const [ data, setData ] = useState<T | null>(null);
     const [ loading, setLoading ] = useState(true);
     const [ error, setError ] = useState<RequestError>(null);
 

@@ -5,5 +5,5 @@ export interface RequestOptions {
 
 export type RequestError = null | any;
 export type RequestFunction = (options?: RequestOptions) => Promise<void>;
-export type RequestState<T = any> = { data: T, loading: boolean, error: RequestError, refetch: RequestFunction };
-export type LazyRequestHookReturn = [ RequestFunction, RequestState ];
+export type RequestState<T> = { data: T | null, loading: boolean, error: RequestError, refetch: RequestFunction };
+export type LazyRequestHookReturn<T = any> = [ RequestFunction, RequestState<T> ];
