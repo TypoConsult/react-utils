@@ -8,3 +8,5 @@ node_modules
 
 # Build
 lib
+*.tgz
+

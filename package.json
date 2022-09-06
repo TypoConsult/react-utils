@@ -1,21 +1,28 @@
 {
-  "name": "@typoconsult/react-utils",
-  "version": "1.0.0",
-  "description": "A package for common React functionality",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": {
-    "name": "Robin Louis van Komen",
-    "email": "rlvk@typoconsult.dk"
-  },
-  "license": "ISC",
-  "peerDependencies": {
-    "react": "^18.2.0"
-  },
-  "devDependencies": {
-    "react": "^18.2.0",
-    "typescript": "^4.8.2"
-  }
+    "name": "@typoconsult/react-utils",
+    "version": "1.0.1",
+    "description": "A package for common React functionality",
+    "main": "lib/index.js",
+    "scripts": {
+        "prebuild": "rimraf ./lib",
+        "build": "tsc -p .",
+        "prepare": "npm run build"
+    },
+    "author": {
+        "name": "Robin Louis van Komen",
+        "email": "rlvk@typoconsult.dk"
+    },
+    "license": "ISC",
+    "files": [
+        "lib"
+    ],
+    "peerDependencies": {
+        "react": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.18",
+        "react": "^18.2.0",
+        "rimraf": "^3.0.2",
+        "typescript": "^4.8.2"
+    }
 }
